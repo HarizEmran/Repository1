@@ -1,0 +1,3 @@
+"0","# complete the code to generate the plot"
+"0",""
+"0","ggplot(data=playlist_data,mapping=aes(x=Age,y=Rating)) + labs(x=""Age"",y=""Rating"") + geom_point()"

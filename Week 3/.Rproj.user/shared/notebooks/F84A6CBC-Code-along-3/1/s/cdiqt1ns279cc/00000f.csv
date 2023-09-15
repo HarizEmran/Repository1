@@ -1,0 +1,2 @@
+"0","# import the cat-lovers data from the csv file you downloaded from canvas"
+"0","cat_lovers <- read_csv(""cat-lovers.csv"")"

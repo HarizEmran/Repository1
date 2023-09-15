@@ -1,0 +1,29 @@
+---
+title: "Challenge-1"
+author: "Hariz Emran"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## About Myself
+
+I am Hariz Emran, a third-year undergraduate at NUS majoring in Malay Studies and Communications & New Media. I love to read in my free time.
+
+
+```{r, out.height= "400px",out.width= "300px",echo=FALSE,eval=TRUE,fig.align='center',fig.cap="A photo of myself at a cafe in Kuala Lumpur"}
+knitr::include_graphics("/Users/harizemran/OneDrive - National University of Singapore/NUS/Modules/Communications & New Media/NM2207 (Y3S1)/Week 1/HarizEmran.jpg")
+```
+
+## R Studio Layout
+
+```{r, out.height= "262px",out.width= "465px",echo=FALSE,eval=TRUE,fig.align='center',fig.cap="The layout of my R Studio for this assignment"}
+knitr::include_graphics("/Users/harizemran/OneDrive - National University of Singapore/NUS/Modules/Communications & New Media/NM2207 (Y3S1)/Week 1/RStudioLayout.jpg")
+```
+
