@@ -1,0 +1,1 @@
+{"frames":[],"message":"Error in ggplot(loans, aes(x = debt_to_income, y = interest_rate)) : \n  could not find function \"ggplot\"\n"}

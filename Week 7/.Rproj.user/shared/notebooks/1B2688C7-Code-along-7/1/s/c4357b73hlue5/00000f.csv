@@ -1,0 +1,327 @@
+"0","# Enter code here"
+"0","install.packages(""openintro"")"
+"2","also installing the dependencies ‘airports’, ‘cherryblossom’, ‘usdata’
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.3/airports_0.1.0.tgz'
+"
+"2","Content type 'application/x-gzip'"
+"2"," length 798266 bytes (779 KB)
+"
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","
+"
+"2","downloaded 779 KB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.3/cherryblossom_0.1.0.tgz'
+"
+"2","Content type 'application/x-gzip'"
+"2"," length 1345206 bytes (1.3 MB)
+"
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","
+"
+"2","downloaded 1.3 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.3/usdata_0.2.0.tgz'
+"
+"2","Content type 'application/x-gzip'"
+"2"," length 2073142 bytes (2.0 MB)
+"
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","
+"
+"2","downloaded 2.0 MB
+
+"
+"2","trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.3/openintro_2.4.0.tgz'
+"
+"2","Content type 'application/x-gzip'"
+"2"," length 5186593 bytes (4.9 MB)
+"
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","
+"
+"2","downloaded 4.9 MB
+
+"
+"1","
+"
+"1",""
+"1","The downloaded binary packages are in
+	/var/folders/xz/sy3bzjpn39xd296d5mqlgzsm0000gn/T//Rtmp6IZjgp/downloaded_packages"
+"1",""
+"1","
+"
+"0","library(openintro)"
+"2","Loading required package: airports
+"
+"2","Loading required package: cherryblossom
+"
+"2","Loading required package: usdata
+"
+"0","glimpse(loans_full_schema)"
+"1","Rows: 10,000"
+"1",""
+"1","
+"
+"1","Columns: 55"
+"1",""
+"1","
+"
+"1","$ emp_title                        [3m[38;5;246m<chr>[39m[23m ""global config engineer…
+$ emp_length                       [3m[38;5;246m<dbl>[39m[23m 3, 10, 3, 1, 10, NA, 10…
+$ state                            [3m[38;5;246m<fct>[39m[23m NJ, HI, WI, PA, CA, KY,…
+$ homeownership                    [3m[38;5;246m<fct>[39m[23m MORTGAGE, RENT, RENT, R…
+$ annual_income                    [3m[38;5;246m<dbl>[39m[23m 90000, 40000, 40000, 30…
+$ verified_income                  [3m[38;5;246m<fct>[39m[23m Verified, Not Verified,…
+$ debt_to_income                   [3m[38;5;246m<dbl>[39m[23m 18.01, 5.04, 21.15, 10.…
+$ annual_income_joint              [3m[38;5;246m<dbl>[39m[23m NA, NA, NA, NA, 57000, …
+$ verification_income_joint        [3m[38;5;246m<fct>[39m[23m , , , , Verified, , Not…
+$ debt_to_income_joint             [3m[38;5;246m<dbl>[39m[23m NA, NA, NA, NA, 37.66, …
+$ delinq_2y                        [3m[38;5;246m<int>[39m[23m 0, 0, 0, 0, 0, 1, 0, 1,…
+$ months_since_last_delinq         [3m[38;5;246m<int>[39m[23m 38, NA, 28, NA, NA, 3, …
+$ earliest_credit_line             [3m[38;5;246m<dbl>[39m[23m 2001, 1996, 2006, 2007,…
+$ inquiries_last_12m               [3m[38;5;246m<int>[39m[23m 6, 1, 4, 0, 7, 6, 1, 1,…
+$ total_credit_lines               [3m[38;5;246m<int>[39m[23m 28, 30, 31, 4, 22, 32, …
+$ open_credit_lines                [3m[38;5;246m<int>[39m[23m 10, 14, 10, 4, 16, 12, …
+$ total_credit_limit               [3m[38;5;246m<int>[39m[23m 70795, 28800, 24193, 25…
+$ total_credit_utilized            [3m[38;5;246m<int>[39m[23m 38767, 4321, 16000, 499…
+$ num_collections_last_12m         [3m[38;5;246m<int>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0,…
+$ num_historical_failed_to_pay     [3m[38;5;246m<int>[39m[23m 0, 1, 0, 1, 0, 0, 0, 0,…
+$ months_since_90d_late            [3m[38;5;246m<int>[39m[23m 38, NA, 28, NA, NA, 60,…
+$ current_accounts_delinq          [3m[38;5;246m<int>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0,…
+$ total_collection_amount_ever     [3m[38;5;246m<int>[39m[23m 1250, 0, 432, 0, 0, 0, …
+$ current_installment_accounts     [3m[38;5;246m<int>[39m[23m 2, 0, 1, 1, 1, 0, 2, 2,…
+$ accounts_opened_24m              [3m[38;5;246m<int>[39m[23m 5, 11, 13, 1, 6, 2, 1, …
+$ months_since_last_credit_inquiry [3m[38;5;246m<int>[39m[23m 5, 8, 7, 15, 4, 5, 9, 7…
+$ num_satisfactory_accounts        [3m[38;5;246m<int>[39m[23m 10, 14, 10, 4, 16, 12, …
+$ num_accounts_120d_past_due       [3m[38;5;246m<int>[39m[23m 0, 0, 0, 0, 0, 0, 0, NA…
+$ num_accounts_30d_past_due        [3m[38;5;246m<int>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0,…
+$ num_active_debit_accounts        [3m[38;5;246m<int>[39m[23m 2, 3, 3, 2, 10, 1, 3, 5…
+$ total_debit_limit                [3m[38;5;246m<int>[39m[23m 11100, 16500, 4300, 194…
+$ num_total_cc_accounts            [3m[38;5;246m<int>[39m[23m 14, 24, 14, 3, 20, 27, …
+$ num_open_cc_accounts             [3m[38;5;246m<int>[39m[23m 8, 14, 8, 3, 15, 12, 7,…
+$ num_cc_carrying_balance          [3m[38;5;246m<int>[39m[23m 6, 4, 6, 2, 13, 5, 6, 1…
+$ num_mort_accounts                [3m[38;5;246m<int>[39m[23m 1, 0, 0, 0, 0, 3, 2, 7,…
+$ account_never_delinq_percent     [3m[38;5;246m<dbl>[39m[23m 92.9, 100.0, 93.5, 100.…
+$ tax_liens                        [3m[38;5;246m<int>[39m[23m 0, 0, 0, 1, 0, 0, 0, 0,…
+$ public_record_bankrupt           [3m[38;5;246m<int>[39m[23m 0, 1, 0, 0, 0, 0, 0, 0,…
+$ loan_purpose                     [3m[38;5;246m<fct>[39m[23m moving, debt_consolidat…
+$ application_type                 [3m[38;5;246m<fct>[39m[23m individual, individual,…
+$ loan_amount                      [3m[38;5;246m<int>[39m[23m 28000, 5000, 2000, 2160…
+$ term                             [3m[38;5;246m<dbl>[39m[23m 60, 36, 36, 36, 36, 36,…
+$ interest_rate                    [3m[38;5;246m<dbl>[39m[23m 14.07, 12.61, 17.09, 6.…
+$ installment                      [3m[38;5;246m<dbl>[39m[23m 652.53, 167.54, 71.40, …
+$ grade                            [3m[38;5;246m<fct>[39m[23m C, C, D, A, C, A, C, B,…
+$ sub_grade                        [3m[38;5;246m<fct>[39m[23m C3, C1, D1, A3, C3, A3,…
+$ issue_month                      [3m[38;5;246m<fct>[39m[23m Mar-2018, Feb-2018, Feb…
+$ loan_status                      [3m[38;5;246m<fct>[39m[23m Current, Current, Curre…
+$ initial_listing_status           [3m[38;5;246m<fct>[39m[23m whole, whole, fractiona…
+$ disbursement_method              [3m[38;5;246m<fct>[39m[23m Cash, Cash, Cash, Cash,…
+$ balance                          [3m[38;5;246m<dbl>[39m[23m 27015.86, 4651.37, 1824…
+$ paid_total                       [3m[38;5;246m<dbl>[39m[23m 1999.330, 499.120, 281.…
+$ paid_principal                   [3m[38;5;246m<dbl>[39m[23m 984.14, 348.63, 175.37,…
+$ paid_interest                    [3m[38;5;246m<dbl>[39m[23m 1015.19, 150.49, 106.43…
+$ paid_late_fees                   [3m[38;5;246m<dbl>[39m[23m 0, 0, 0, 0, 0, 0, 0, 0,…"
+"1",""
+"1","
+"

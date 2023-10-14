@@ -1,0 +1,23 @@
+"0","# Enter code here"
+"0","ggplot(loans, aes(x = debt_to_income, y = interest_rate)) +"
+"0","  geom_hex()"
+"1","[34mℹ[39m The package ""hexbin"" is required for `stat_binhex()`
+[31m✖[39m Would you like to install it?
+"
+"1",""
+"1","
+"
+"1","1: Yes"
+"1","
+"
+"1","2: No"
+"1","
+"
+"1",""
+"1","
+"
+"0","Ye"
+"1","Enter an item from the menu, or 0 to exit
+"
+"0","Yes"
+"0","no"
