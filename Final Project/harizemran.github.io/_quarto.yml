@@ -13,7 +13,7 @@ website:
 
 format:
   html:
-    theme: flatly
+    theme: ''
     css: styles.css
     toc: true
 
