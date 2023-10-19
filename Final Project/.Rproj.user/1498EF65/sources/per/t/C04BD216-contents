@@ -1,0 +1,87 @@
+---
+title: "Data-Reading"
+author: "Hariz Emran"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Information on Quantity of Controlled Drugs Siezed
+
+```{r,echo=TRUE,eval=TRUE}
+library(tidyverse)
+quantity_drugs_seized <- read_csv("Informationonquantityofcontrolleddrugsseized.csv")
+quantity_drugs_seized
+unique(quantity_drugs_seized$drug)
+```
+
+## Inhalant Abusers Arrested by Status
+
+```{r,echo=TRUE,eval=TRUE}
+abusers_by_status <- read_csv("DataonInhalantAbusersArrestedByStatus.csv")
+abusers_by_status
+unique(abusers_by_status$year)
+```
+
+## Inhalant Abusers Arrested by Age
+
+```{r,echo=TRUE,eval=TRUE}
+abusers_by_age <- read_csv("DataonInhalantAbusersArrestedbyAgeGroup.csv")
+abusers_by_age
+unique(abusers_by_age$year)
+unique(abusers_by_age$age_group)
+```
+
+##  Inhalant Abusers Arrested by Gender
+
+```{r,echo=TRUE,eval=TRUE}
+abusers_by_gender <- read_csv("DataonInhalantAbusersArrestedByGender.csv")
+abusers_by_gender
+unique(abusers_by_gender$year)
+```
+
+##  Inhalant Abusers Arrested by Ethnicity
+
+```{r,echo=TRUE,eval=TRUE}
+abusers_by_ethnicity <- read_csv("DataonInhalantAbusersArrestedByEthnicGroup.csv")
+abusers_by_ethnicity
+unique(abusers_by_ethnicity$year)
+```
+
+## Population of Inmates in DRC
+
+```{r,echo=TRUE,eval=TRUE}
+inmates <- read_csv("PopulationofInmatesinDrugRehabilitationCentreDRC.csv")
+inmates
+```
+
+## Population of Inmates in DRC by Age (Before 2020)
+
+```{r,echo=TRUE,eval=TRUE}
+inmates_by_age_before2020 <- read_csv("PopulationofInmatesinDrugRehabilitationCentreDRCbyAgeGroup20062020.csv")
+inmates_by_age_before2020
+```
+
+## Population of Inmates in DRC by Age (After 2020)
+
+```{r,echo=TRUE,eval=TRUE}
+inmates_by_age_after2020 <- read_csv("PopulationofInmatesinDrugRehabilitationCentreDRCbyAgeGroup2020onwards.csv")
+inmates_by_age_after2020
+```
+
+## Population of Inmates in DRC by Gender
+
+```{r,echo=TRUE,eval=TRUE}
+inmates_by_gender <- read_csv("PopulationofInmatesinDrugRehabilitationCentreDRCbyGender.csv")
+inmates_by_gender
+```
+
+## Population of Inmates in DRC by Education Level
+
+```{r,echo=TRUE,eval=TRUE}
+inmates_by_education <- read_csv("PopulationofInmatesinDrugRehabilitationCentreDRCbyEducationLevel.csv")
+inmates_by_education
+```
