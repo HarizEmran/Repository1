@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Challenge-11",
+    "section": "",
+    "text": "# A tibble: 6 × 6\n  Date       Alaska California New_Jersey Tennessee District_of_Columbia\n  &lt;chr&gt;       &lt;int&gt;      &lt;int&gt;      &lt;int&gt;     &lt;int&gt;                &lt;int&gt;\n1 2020-03-01      0          0          0         0                    0\n2 2020-03-02      0          0          0         0                    0\n3 2020-03-03      0          0          0         0                    0\n4 2020-03-04      0          0          0         0                    0\n5 2020-03-05      0          0          0         0                    0\n6 2020-03-06      0          0          0         0                    0"
+  },
+  {
+    "objectID": "index.html#what-is-the-population-in-various-states-of-u.s.a",
+    "href": "index.html#what-is-the-population-in-various-states-of-u.s.a",
+    "title": "Challenge-11",
+    "section": "What is the population in various states of U.S.A?",
+    "text": "What is the population in various states of U.S.A?"
+  },
+  {
+    "objectID": "index.html#what-fraction-of-the-population-was-infected",
+    "href": "index.html#what-fraction-of-the-population-was-infected",
+    "title": "Challenge-11",
+    "section": "What fraction of the population was infected?",
+    "text": "What fraction of the population was infected?"
+  },
+  {
+    "objectID": "index.html#what-fraction-of-infected-persons-recovered",
+    "href": "index.html#what-fraction-of-infected-persons-recovered",
+    "title": "Challenge-11",
+    "section": "What fraction of infected persons recovered?",
+    "text": "What fraction of infected persons recovered?"
+  },
+  {
+    "objectID": "index.html#what-fraction-of-the-population-is-currently-vaccinated",
+    "href": "index.html#what-fraction-of-the-population-is-currently-vaccinated",
+    "title": "Challenge-11",
+    "section": "What fraction of the population is currently vaccinated?",
+    "text": "What fraction of the population is currently vaccinated?\n\n\nWarning: Removed 3 rows containing missing values (`position_stack()`)."
+  },
+  {
+    "objectID": "index.html#what-was-the-transmission-like-in-the-various-states",
+    "href": "index.html#what-was-the-transmission-like-in-the-various-states",
+    "title": "Challenge-11",
+    "section": "What was the transmission-like in the various states?",
+    "text": "What was the transmission-like in the various states?"
+  },
+  {
+    "objectID": "index.html#how-did-the-disease-progress-since-it-started",
+    "href": "index.html#how-did-the-disease-progress-since-it-started",
+    "title": "Challenge-11",
+    "section": "How did the disease progress since it started?",
+    "text": "How did the disease progress since it started?\n\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\nRemoved 2 rows containing missing values (`geom_point()`).\nRemoved 2 rows containing missing values (`geom_point()`).\nRemoved 2 rows containing missing values (`geom_point()`)."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]

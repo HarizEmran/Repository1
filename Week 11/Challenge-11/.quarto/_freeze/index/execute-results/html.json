@@ -1,0 +1,16 @@
+{
+  "hash": "e5ae871adc32a0dd371223e1f701b8ed",
+  "result": {
+    "markdown": "---\ntitle: \"Challenge-11\"\n---\n\n::: {.cell}\n\n:::\n\n\n## What is the population in various states of U.S.A?\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\n## What fraction of the population was infected?\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n\n\n## What fraction of infected persons recovered?\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-4-1.png){width=672}\n:::\n:::\n\n\n## What fraction of the population is currently vaccinated?\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stderr}\n```\nWarning: Removed 3 rows containing missing values (`position_stack()`).\n```\n:::\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-5-1.png){width=672}\n:::\n:::\n\n\n## What was the transmission-like in the various states?\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-6-1.png){width=672}\n:::\n:::\n\n\n## How did the disease progress since it started?\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stderr}\n```\nWarning: Removed 2 rows containing missing values (`geom_point()`).\nRemoved 2 rows containing missing values (`geom_point()`).\nRemoved 2 rows containing missing values (`geom_point()`).\nRemoved 2 rows containing missing values (`geom_point()`).\n```\n:::\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-7-1.png){width=672}\n:::\n:::",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
