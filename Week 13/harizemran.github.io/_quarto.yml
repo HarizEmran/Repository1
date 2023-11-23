@@ -1,0 +1,27 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Singapore's Addiction to Drugs"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: drug_type.qmd
+        text: Popular Drug Types
+      - href: abusers_arrested.qmd
+        text: Inhalant Abusers Arrested
+      - href: drc_inmates.qmd
+        text: Drug Rehabilitation Centre
+      - href: about.qmd
+        text: About
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+
+editor: visual
+

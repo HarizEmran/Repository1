@@ -1,0 +1,17 @@
+{
+  "index.qmd": {
+    "index.html": "ee371d64"
+  },
+  "about.qmd": {
+    "about.html": "cff921d1"
+  },
+  "drug_type.qmd": {
+    "drug_type.html": "e351a6d7"
+  },
+  "abusers_arrested.qmd": {
+    "abusers_arrested.html": "37472eb4"
+  },
+  "drc_inmates.qmd": {
+    "drc_inmates.html": "3aaa17c2"
+  }
+}

@@ -1,0 +1,114 @@
+---
+title: "Drug Rehabilitation Centre"
+---
+
+## Drug Rehabilitation Centre in Singapore
+
+![](drc.jpg){fig-align="center"}
+
+Individuals with a moderate or higher risk of relapse, or those who are repeat drug abusers, will undergo rehabilitation at the Drug Rehabilitation Centre (DRC). Upon successful completion of the DRC programme, these individuals will not carry a criminal record, provided they are not under investigation for other drug or criminal offenses that may lead to charges in court. In such cases, if found guilty, the abuser may be charged for drug consumption and acquire a criminal record.
+
+Within the DRC, the Singapore Prison Service (SPS) conducts intensive rehabilitation programmes tailored to the individuals' rehabilitation needs. These encompass psychological interventions targeting drug use habits, family programmes enhancing relationship skills, and vocational training for employability to aid ex-abusers in reintegrating into society.
+
+The DRC categorises abusers based on the risk of reoffending, with treatment lasting 12 months or more. Notably, in 2019, the rehabilitation regime expanded to include third-time and above repeat pure drug abusers, aiming to facilitate their reintegration into society.
+
+After release, individuals undergo urine and/or hair supervision to detect and deter potential relapse.
+
+This CNA documentary compares the long path of drug rehabilitation in Singapore, Malaysia and the United States of America.
+
+{{< video https://www.youtube.com/embed/byAoF42vzRo?si=yypQg9m1ijXXLWrQ >}}
+
+## Analysis & Implications of Trends of Drug Rehabilitation Centre Inmates in Singapore
+
+```{r,echo=FALSE,eval=TRUE,message=FALSE}
+library(tidyverse)
+
+inmates_by_age_before2020 <- read_csv("PopulationofInmatesinDrugRehabilitationCentreDRCbyAgeGroup20062020.csv")
+inmates_by_age_before2020[inmates_by_age_before2020 == "60 Above"] <- "60 & Above"
+inmates_by_age_before2020 <- inmates_by_age_before2020 %>%
+  mutate(year_new = as.character(inmates_by_age_before2020$year)) %>%
+  rename(Population = number_of_population) %>%
+  rename(Age = population_by_age_group) %>%
+  rename(Year = year_new)
+
+inmates_by_age_after2020 <- read_csv("PopulationofInmatesinDrugRehabilitationCentreDRCbyAgeGroup2020onwards.csv")
+inmates_by_age_after2020[inmates_by_age_after2020 == "19 & below"] <- "19 & Below"
+inmates_by_age_after2020[inmates_by_age_after2020 == "75 & above"] <- "75 & Above"
+inmates_by_age_after2020 <- inmates_by_age_after2020 %>%
+  mutate(year_new = as.character(inmates_by_age_after2020$year)) %>%
+  rename(Population = number_of_population) %>%
+  rename(Age = population_by_age_group) %>%
+  rename(Year = year_new)
+
+inmates_by_gender <- read_csv("PopulationofInmatesinDrugRehabilitationCentreDRCbyGender.csv")
+inmates_by_gender <- inmates_by_gender %>%
+  mutate(year_new = as.character(inmates_by_gender$year)) %>%
+  rename(Population = number_of_population) %>%
+  rename(Gender = population_by_gender) %>%
+  rename(Year = year_new)
+
+inmates_by_education <- read_csv("PopulationofInmatesinDrugRehabilitationCentreDRCbyEducationLevel.csv")
+inmates_by_education[inmates_by_education == "Tertiary and Above"] <- "Tertiary & Above"
+inmates_by_education[inmates_by_education == "Pre University"] <- "Pre-University"
+inmates_by_education[inmates_by_education == "PreU"] <- "Pre-University"
+inmates_by_education <- inmates_by_education %>%
+  mutate(year_new = as.character(inmates_by_education$year)) %>%
+  rename(Population = number_of_population) %>%
+  rename(Education = population_by_education_level) %>%
+  rename(Year = year_new)
+```
+
+While the only publicly available statistics surrounding the inmates at the DRC are with regards to the total numbers of the inmates every year and their profiles^2^, they should still be able to provide some insight into the profiles of drug abusers, most of whom would have been subjected to the DRC. Unfortunately, the lack of provision of further details, such as the different lengths of the regimes being served by the inmates, their status as new or repeat inmates and the intersections of their profiles, severely limits the findings that can be obtained from these numbers.
+
+```{r,echo=FALSE,eval=TRUE,message=FALSE}
+library(ggplot2)
+library(plotly)
+
+inmates_gender <- ggplot(inmates_by_gender,aes(x = Year, y = Population, fill = Gender)) + 
+  geom_bar(position = "dodge", stat = "identity") +
+  labs(x = "Year", y = "Population", title = "Gender of Inmates at the Drug Rehabilitation Centre", fill = "Gender")
+ggplotly(inmates_gender)
+```
+
+(Note: Interact with the graph to view the values)
+
+The number of inmates in the DRC has considerably increased over the years, with male inmates making a vast majority over the female inmates. Similar to the gender proportions of [inhalant abusers arrested](abusers_arrested.qmd) over the years, it can be concluded that men have a higher risk of engaging in drug abuse and thus be subjected to the DRC in comparison to women. Yet, the increasing numbers of inmates might be symptomatic of shortcomings of the Central Narcotics Bureau's (CNB) [*Preventive Drug Education (PDE)*](index.qmd) and [*Structured Rehabilitation & Aftercare Programmes*](index.qmd) strategies.
+
+```{r,echo=FALSE,eval=TRUE,message=FALSE}
+library(ggplot2)
+library(plotly)
+
+inmates_age_before_2020 <- ggplot(inmates_by_age_before2020,aes(x = Year, y = Population, fill = Age)) + 
+  geom_bar(position = "dodge", stat = "identity") +
+  labs(x = "Year", y = "Population", title = "Age of Inmates at the Drug Rehabilitation Centre (Before 2020)", fill = "Age Group")
+ggplotly(inmates_age_before_2020)
+
+inmates_age_after_2020 <- ggplot(inmates_by_age_after2020,aes(x = Year, y = Population, fill = Age)) + 
+  geom_bar(position = "dodge", stat = "identity") +
+  labs(x = "Year", y = "Population", title = "Age of Inmates at the Drug Rehabilitation Centre (After 2020)", fill = "Age Group")
+ggplotly(inmates_age_after_2020)
+```
+
+(Note: Interact with the graph to view the values)
+
+Over the years, the number of inmates in the DRC within each age group has varied and fluctuated. However, the huge bulk of the inmates mainly and consistently occupy the age range from 20 to 60 while those outside this range remain relatively low. The considerably low number of youth inmates below 21 in the DRC might be the result of effective [*Preventive Drug Education (PDE)*](index.qmd) programmes in schools that have hindered most youths from approaching drug abuse. At the same time, the majority of inmates consistently being 20 to 60 years old highlights the need for the [*Preventive Drug Education (PDE)*](index.qmd) to also direct more focus on its programmes outside schools and at the workplace or other environments to target more adults.
+
+```{r,echo=FALSE,eval=TRUE,message=FALSE}
+library(ggplot2)
+library(plotly)
+
+inmates_education <- ggplot(inmates_by_education,aes(x = Year, y = Population, fill = Education)) + 
+  geom_bar(position = "dodge", stat = "identity") +
+  labs(x = "Year", y = "Population", title = "Education Level of Inmates at the Drug Rehabilitation Centre", fill = "Education Level")
+ggplotly(inmates_education)
+```
+
+(Note: Interact with the graph to view the values)
+
+Amongst the inmates in the DRC, a large majority consistently consists of those with only secondary education level, followed by those with only primary education level and then by those with only vocational education level before the other education levels. While the numbers provided by the CNB^2^ here do not segment these groups further into age groups within each education level, it should be safe to assume based on the previous numbers on age groups of inmates in the DRC that most of those in each education level are no longer youth below 21. Along this line, most of those even in the three mentioned education level might have left school upon obtaining said highest education level. This further emphasises the need for greater focus of [*Preventive Drug Education (PDE)*](index.qmd) outside schools and at the workplace or other environments to target more adults instead of just youths.
+
+------------------------------------------------------------------------
+
+^1^Central Narcotics Bureau. (2023, November 15). *CNB Explains*. <https://www.cnb.gov.sg/CNBExplains/where-do-adult-drug-abusers-go-when-caught>
+
+^2^Central Narcotics Bureau. (2023). *Population of Inmates in Drug Rehabilitation Centre (DRC)*. <https://beta.data.gov.sg/collections/1925/datasets/d_65015e4fcdf3f9145e9738ba473b3526/view>

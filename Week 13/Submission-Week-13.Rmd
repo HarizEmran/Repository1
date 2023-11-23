@@ -1,0 +1,122 @@
+---
+title: "Submission-Week-13"
+author: "Hariz Emran"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Week-9: Webpage + Diary Entry
+
+## What is the topic that you have finalised?
+
+I have finalised on the topic of drug abuse and rehabilitation trends in Singapore over the years.
+
+## What are the data sources that you have curated so far?
+
+I have curated some data sets from <https://beta.data.gov.sg/>, Singapore's national open data collection site. The data sets that I have collated thus far are namely the demographics of inhalant abusers arrested and the inmates undergoing rehabilitation in the Drug Rehabilitation Centre (DRC) as well as the quantity and type of controlled drugs that have been seized.
+
+# Week-10: Diary Entry
+
+## What is the question that you are going to answer?
+
+How effective have current efforts been in addressing the problem of drug abuse in Singapore and how can they be improved?
+
+## Why is this an important question?
+
+Drug abuse and addiction can have serious adverse effects on an individual's life. Tackling drug abuse requires a multifaceted approach given the nuanced factors involved. Recognising current trends related to drug abuse could prove crucial in designing more targeted and effective policies to resolve the issue in the long-term.
+
+## Which rows and columns of the dataset will be used to answer this question?
+
+Multiple variables of the different collated data sets will be used, namely the quantities and types of drugs that have been seized over the years, the demographics of the inhalant abusers arrested by age, ethnicity, gender and status over the years as well as the demographics of inmates in the DRC by age, education level and gender. A challenge that I faced was the inconsistency of some variables such as the unit of measurement (kilograms, grams, tablets) in the data set on quantities and types of drugs seized. To overcome this, I separated the drugs that had their quantities in tablets while converting the drugs that had their quantities in grams to be reflected as kilograms.
+
+# Week-11: Diary Entry + Placeholders Integrated with Webpage
+
+## List the visualisations that you are going to use in your project.
+
+I am going to use grouped bar plots to visualise the following data:
+
+- Controlled Drugs Seized by Measurements, i.e. Kilograms, Grams, Tablets
+
+- Inhalant Abusers Arrested by Status, Age, Gender & Ethnicity
+
+- Population of Inmates in the DRC by Age (Before & After 2020), Gender & Education Level
+
+## How do you plan to make it interactive?
+
+I plan to make the visualisations interactive by using "plotly" so that users can zoom in and explore the specific values of each bar in all the grouped bar plots. I also plan to use "shiny" so that users can choose which bar chart to look at on the specific page that they are on.
+
+## What concepts incorporated in your project were taught in the course and which ones were self-learnt?
+
+Week 3 - Explicit Coercion of Variable Types
+
+Week 4 - Selection & Creation of Columns; Slicing of Rows
+
+Week 7 - Customisation of Bar Plots
+
+Week 8 - "shiny"
+
+Self-Learnt - Renaming of variables and values; "plotly"; Grouped Bar Plots
+
+While I had converted the drugs that had their quantities in grams to be reflected as kilograms earlier, I decided to revert this so as to present the drugs which had their original quantities in grams on their own plot. I realised that comparing them directly with the drugs that had their original quantities in kilograms would indirectly reduce their significance due to their extremely small values by comparison. Another hurdle I faced was the inability to generate proper and accurate plots, for which I later realised the issue was due to the variables of the original data sets being of the incorrect type, e.g. character or double, and I utilised explicit coercion to address this.
+
+# Week-12: Diary Entry
+
+## What were the challenges and errors faced and how were they overcome?
+
+The biggest challenge I faced was implementing "shiny" for users to be able to toggle through the different data plots on each tab of the website. I realised that, to generate interactive models showcasing different data plots, "shiny" generally functions by using a singular data set which it then derives specific variables selected by the user to display in a data plot. In contrast, almost all data plots used on the website were derived from separate data sets each, that are also largely two-dimensional in nature. This was due to the manner in which the data sets used for this project were published by the Central Narcotics Bureau of Singapore (CNB) on <https://beta.data.gov.sg/>, that had already separated data sets entirely according to variables, e.g. age, education level, gender. Furthermore, I had already made various changes to the variables and values to the different data sets beforehand and combining the data sets into a singular one would require further time and effort.
+
+As such, I decided to halt the pursuit of a solution to implementing "shiny" since the only interactivity it offered was to toggle between separate plots to display at a time. After all, I had already utilised "plotly" to enable users to interact with each data plot and explore the specific values of different variables that might be of interest. I also shifted my focus and time to implementing sections that embedded YouTube videos that can capture the interest and attention of users while providing relevant and interesting information.
+
+# Final Submission
+
+The theme of my data story is drug abuse and rehabilitation in Singapore. As I elaborated in my project website, this issue is still a prevalent one that deserves attention and efforts to better address it even today. The nation-state is known for its harsh punishment of crime and has one of the toughest drug laws in the world, especially with regards to its execution of individuals for narcotic offences, which has drawn considerable international criticism and pressure for reform (“Singapore Hangs”, 2023). Yet, drug trafficking remains rife, with a recent bust witnessing drugs worth S$473,000 being seized (“Drugs Worth”, 2023). A total of 2,826 drug abusers were arrested in 2022, a 4% increase from the year before (Central Narcotics Bureau, 2023d). The situation amongst youth is provides further case for concern. There was a 10.1% rise in the total number of drug abusers below 20 years old arrested between 2016 and 2020 (Central Narcotics Bureau, 2023i).
+
+The data sources that I have curated and utilised for this project are official statistics published by the Central Narcotics Bureau (CNB) via <https://beta.data.gov.sg/>, Singapore’s national open data collection site, and are thus reliable data sources. Given that these data sources cover statistics surrounding drug abuse and rehabilitation in Singapore over the past few years, namely with regards to trends surrounding common drug types seized as well as demographics of inhalant abusers arrested and inmates at the Drug Rehabilitation Centre (DRC), they should provide valuable insight into the effectiveness of current measures as well as suggestions for improvement.
+
+Generally, some insights gained from the data that are examined in greater detail on the project website include the point that different drug types are continuously varying and fluctuating in popularity every year. This pattern can be seen too in the profiles of inmates in the DRC, that have worryingly been increasing every year. Inversely and fortunately, the number of inhalant abusers arrested has been decreasing steadily. These insights are depicted in plots by using packages in R, namely “tidyverse” to tidy up the raw data, “ggplot2” to plot the data into grouped bar graphs as well as “plotly” to enable the graphs to be interactive. Users can interact with the graphs such as by selecting or deselecting certain variables to be displayed as well as clicking on different bars to obtain their actual values for comparison.
+
+I implemented this project to produce a website that was both accessible and easy to navigate and understand. Its aim is to act as a one-stop primer for anyone interested to find out more about the issue of drug abuse and rehabilitation in Singapore. To achieve this, in addition to the data sets obtained from the CNB mentioned earlier, I also derived important and relevant information on the topic from other reliable sources such as news articles and websites and included them in a short and succinct manner to provide contextualisation and explanation to the data sets being depicted. Apart from the words and numbers on the website that might seem too plain and off-putting, I also provided images to provide users with better visualisations and embedded two documentaries by CNA Insider (2021, 2023) on two different pages of the website related to the content of those pages respectively to supplement the information already provided on the website with more findings and perspectives. I also included in-text hyperlinks for users to easily navigate to other pages of the website as they browse through the texts. References to other external websites are also cited at the bottom of every page of the website with functional hyperlinks for users to visit if they would like to obtain more information. Overall, this should provide a more holistic and natural user and learning experience for users of this website as they learn more about the issue of drug abuse and rehabilitation in Singapore.
+
+*Project References*
+
+Alcohol and Drug Foundation. (2023, October 12). *Opium*. https://adf.org.au/drug-facts/opium/
+
+Central Narcotics Bureau. (2022a). *Information on Quantity of Controlled Drugs Seized*. https://beta.data.gov.sg/collections/523/view
+
+Central Narcotics Bureau. (2023b). *Data on inhalant abusers arrested*. https://beta.data.gov.sg/collections/524/datasets/d_06dec2e253224d72d528ddf39f57a548/view
+
+Central Narcotics Bureau. (2023c). *Population of Inmates in Drug Rehabilitation Centre (DRC)*. https://beta.data.gov.sg/collections/1925/datasets/d_65015e4fcdf3f9145e9738ba473b3526/view
+
+Central Narcotics Bureau. (2023d). *CNB Annual Report 2022*. https://www.cnb.gov.sg/docs/default-source/default-document-library/cnb-annual-report-2022.pdf
+
+Central Narcotics Bureau. (2023e, July 12). *Educational Resources*. https://www.cnb.gov.sg/educational-resources/core-programmes
+
+Central Narcotics Bureau. (2023f, July 13). *Drug Information*. https://www.cnb.gov.sg/drug-information/drugs-and-inhalants
+
+Central Narcotics Bureau. (2023g, November 15). *CNB Explains*. https://www.cnb.gov.sg/CNBExplains/where-do-adult-drug-abusers-go-when-caught
+
+Central Narcotics Bureau. (2023h, November 15). *CNB Explains*. https://www.cnb.gov.sg/CNBExplains/cnb-explains-where-do-youth-drug-abusers-go-when-caught
+
+Central Narcotics Bureau. (2023i, November 15). *CNB Explains*. https://www.cnb.gov.sg/CNBExplains/explainer-article/cnb-explains-what-happens-when-the-suspect-is-a-young-person
+
+Chua, N. (2023, May 4). Hooked on heroin at 12: IMH survey finds starting mean age for drug consumption in S’pore at 15.9 years. *The Straits Times*. https://www.straitstimes.com/singapore/hooked-on-heroin-at-12-worrying-trend-of-younger-drug-abusers
+
+CNA Insider. (2021, August 31). *The Long, Hard Road Of Drug Rehabilitation - Singapore, Malaysia & US | CNA Correspondent* [Video]. YouTube. https://youtu.be/byAoF42vzRo?si=A5Z_0fo4P2LqB1B_
+
+CNA Insider. (2023, May 2). *Why Are Youths Getting Hooked On Cannabis? | Talking Point | Full Episode* [Video]. YouTube. https://youtu.be/9zpFbv1er6k?si=3yDid3kGadX7F2zo
+
+Collins, J. (2018, December 11). Why are so many countries now saying cannabis is OK? *BBC*. https://www.bbc.com/news/world-46374191
+
+Drugs worth S$473,000 seized by CNB; man and woman arrested. (2023, October 11). *CNA*. https://www.channelnewsasia.com/singapore/central-narcotics-bureau-cnb-seized-drug-trafficking-boon-keng-condominium-heroin-ice-cannabis-ecstasy-3837071
+
+Koh, F. (2018, September 24). Seven-member team recognised for anti-drug efforts among Malay-Muslim community. *The Straits Times*. https://www.straitstimes.com/singapore/seven-man-team-recognised-for-anti-drug-efforts-among-malay-muslim-community
+
+Ministry of Home Affairs. (2023, November 21). Keeping Singapore Drug-Free. https://www.mha.gov.sg/what-we-do/keeping-singapore-drug-free
+
+Singapore hangs third person for drug offences in little over a week. (2023, August 3). *Al Jazeera*. https://www.aljazeera.com/news/2023/8/3/singapore-hangs-third-person-for-drug-offences-in-little-over-a-week
+
+(892 words)
